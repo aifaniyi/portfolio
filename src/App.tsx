@@ -2,9 +2,9 @@ import { ThemeProvider } from './components/ThemeProvider';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { HeroTwoColumn as Hero } from './components/HeroTwoColumn';
+import { ProjectsSection } from './components/ProjectsSection';
 import { Section } from './components/Section';
 import { Container } from './components/Container';
-import { DataTestPage } from './pages/DataTestPage';
 import './styles/globals.css';
 
 function App() {
@@ -16,12 +16,7 @@ function App() {
         <main className="flex-1 pt-16">
           <Hero />
 
-          <Section id="projects">
-            <Container>
-              <h2 className="text-3xl font-bold mb-8">Projects</h2>
-              <DataTestPage />
-            </Container>
-          </Section>
+          <ProjectsSection />
 
           <Section id="about">
             <Container>
