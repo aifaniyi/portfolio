@@ -3,6 +3,7 @@ import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { Section } from './components/Section';
 import { Container } from './components/Container';
+import { DataTestPage } from './pages/DataTestPage';
 import './styles/globals.css';
 
 function App() {
@@ -19,7 +20,7 @@ function App() {
                   Welcome to Portfolio
                 </h1>
                 <p className="text-xl text-muted-foreground mb-8">
-                  Epic 2 setup complete. Core UI components ready!
+                  Epic 3 complete. Data layer ready!
                 </p>
               </div>
             </Container>
@@ -27,10 +28,7 @@ function App() {
 
           <Section id="projects">
             <Container>
-              <h2 className="text-3xl font-bold mb-8">Projects</h2>
-              <p className="text-muted-foreground">
-                Projects section coming soon...
-              </p>
+              <DataTestPage />
             </Container>
           </Section>
 

@@ -12,7 +12,7 @@ export function Footer() {
         <div className="flex flex-col items-center gap-4">
           <div className="flex items-center gap-4">
             <a
-              href="https://github.com"
+              href="https://github.com/aifaniyi"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-foreground transition-colors"
@@ -21,7 +21,7 @@ export function Footer() {
               <span className="sr-only">GitHub</span>
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/akinwale-ifaniyi-a865b861"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-foreground transition-colors"
@@ -30,7 +30,7 @@ export function Footer() {
               <span className="sr-only">LinkedIn</span>
             </a>
             <a
-              href="mailto:contact@example.com"
+              href="mailto:waleifaniyi@gmail.com"
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
               <Mail className="h-5 w-5" />
