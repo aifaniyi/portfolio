@@ -8,6 +8,7 @@ export { Tabs, TabsList, TabsTrigger, TabsContent } from './ui/tabs';
 export { Separator } from './ui/separator';
 export { Header } from './Header';
 export { Footer } from './Footer';
+export { Hero } from './Hero';
 export { MobileNav } from './MobileNav';
 export { ThemeToggle } from './ThemeToggle';
 export { Section } from './Section';

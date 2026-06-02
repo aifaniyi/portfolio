@@ -1,6 +1,7 @@
 import { ThemeProvider } from './components/ThemeProvider';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
+import { Hero } from './components/Hero';
 import { Section } from './components/Section';
 import { Container } from './components/Container';
 import { DataTestPage } from './pages/DataTestPage';
@@ -13,21 +14,11 @@ function App() {
         <Header />
 
         <main className="flex-1 pt-16">
-          <Section id="home" className="min-h-[calc(100vh-4rem)]">
-            <Container>
-              <div className="flex flex-col items-center justify-center min-h-[calc(100vh-8rem)] text-center">
-                <h1 className="text-4xl md:text-6xl font-bold mb-4">
-                  Welcome to Portfolio
-                </h1>
-                <p className="text-xl text-muted-foreground mb-8">
-                  Epic 3 complete. Data layer ready!
-                </p>
-              </div>
-            </Container>
-          </Section>
+          <Hero />
 
           <Section id="projects">
             <Container>
+              <h2 className="text-3xl font-bold mb-8">Projects</h2>
               <DataTestPage />
             </Container>
           </Section>
