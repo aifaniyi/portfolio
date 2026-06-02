@@ -38,11 +38,13 @@ export function HeroWithTyping() {
     >
       <div className="container mx-auto px-4 py-32 md:py-40">
         <div className="max-w-4xl mx-auto text-center space-y-8">
-          {/* Avatar/Image Placeholder */}
+          {/* Avatar/Image */}
           <div className="flex justify-center mb-8">
-            <div className="w-32 h-32 rounded-full bg-gradient-to-br from-primary to-primary/50 flex items-center justify-center text-5xl font-bold text-primary-foreground shadow-lg">
-              {personalInfo.name.charAt(0)}
-            </div>
+            <img
+              src="/me.jpg"
+              alt={personalInfo.name}
+              className="w-32 h-32 rounded-full object-cover shadow-lg ring-4 ring-primary/20"
+            />
           </div>
 
           {/* Greeting */}
