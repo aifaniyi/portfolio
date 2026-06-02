@@ -58,9 +58,9 @@ export function HeroWithTyping() {
           </div>
 
           {/* Title with typing effect */}
-          <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold text-primary min-h-[3rem] animation-delay-200">
+          <div className="text-xl md:text-2xl lg:text-3xl font-semibold text-primary min-h-[3rem] animate-fade-in animation-delay-200">
             <TypingEffect text={personalInfo.title} speed={50} />
-          </h2>
+          </div>
 
           {/* Tagline */}
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed animate-fade-in-up animation-delay-400">

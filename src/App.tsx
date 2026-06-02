@@ -1,7 +1,7 @@
 import { ThemeProvider } from './components/ThemeProvider';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
-import { Hero } from './components/Hero';
+import { HeroTwoColumn as Hero } from './components/HeroTwoColumn';
 import { Section } from './components/Section';
 import { Container } from './components/Container';
 import { DataTestPage } from './pages/DataTestPage';

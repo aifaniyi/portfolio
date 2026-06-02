@@ -3,35 +3,30 @@ import type { SocialLink } from '@/types';
 export const socialLinks: SocialLink[] = [
   {
     platform: 'github',
-    url: 'https://github.com/yourusername',
+    url: 'https://github.com/aifaniyi',
     label: 'GitHub',
   },
   {
     platform: 'linkedin',
-    url: 'https://linkedin.com/in/yourusername',
+    url: 'https://www.linkedin.com/in/akinwale-ifaniyi-a865b861',
     label: 'LinkedIn',
   },
   {
-    platform: 'twitter',
-    url: 'https://twitter.com/yourusername',
-    label: 'Twitter',
-  },
-  {
     platform: 'email',
-    url: 'mailto:your.email@example.com',
+    url: 'mailto:waleifaniyi@gmail.com',
     label: 'Email',
   },
 ];
 
 export const contactInfo = {
-  email: 'your.email@example.com',
-  location: 'San Francisco, CA',
+  email: 'waleifaniyi@gmail.com',
+  location: 'Calgary, AB',
   availability: 'Open to opportunities',
 };
 
 export const personalInfo = {
-  name: 'Your Name',
-  title: 'Software Engineer | DevOps & Cloud Infrastructure Specialist',
+  name: 'Akinwale Ifaniyi',
+  title: 'Backend Engineer | DevOps & Cloud Infrastructure Specialist',
   tagline:
     'Building scalable systems and infrastructure with expertise in cloud platforms, DevOps, and modern software development',
   bio: `Passionate technologist with expertise spanning software development, DevOps/SRE, platform engineering, data engineering, cloud infrastructure, and networking. 
