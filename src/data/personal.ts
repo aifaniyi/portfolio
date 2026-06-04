@@ -26,7 +26,7 @@ export const contactInfo = {
 
 export const personalInfo = {
   name: 'Akinwale Ifaniyi',
-  title: 'Backend Engineer | DevOps & Cloud Infrastructure Specialist',
+  title: 'AI | Backend Engineer | DevOps & Cloud Infrastructure Specialist',
   tagline:
     'Building scalable systems and infrastructure with expertise in cloud platforms, DevOps, and modern software development',
   bio: `Passionate technologist with expertise spanning software development, DevOps/SRE, platform engineering, data engineering, cloud infrastructure, and networking. 

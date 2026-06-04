@@ -120,4 +120,66 @@
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+
+  .carousel-card {
+    transform-style: flat !important;
+  }
+
+  .carousel-card:not(.carousel-card--active) {
+    display: none !important;
+  }
+}
+
+/* 3D Carousel Styles */
+@layer components {
+  .carousel-3d-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .carousel-3d-perspective {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .carousel-3d-stage {
+    position: relative;
+    transform-style: preserve-3d;
+  }
+
+  .carousel-card {
+    will-change: transform, opacity;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform-origin: center center;
+  }
+
+  .carousel-card:hover {
+    box-shadow: 0 30px 90px rgba(0, 0, 0, 0.45);
+  }
+
+  .dark .carousel-card:hover {
+    box-shadow: 0 30px 90px rgba(0, 0, 0, 0.7);
+  }
+
+  /* Enhanced shadow for better depth perception */
+  .dark .carousel-card {
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  }
+
+  /* Reduced motion fallback */
+  .carousel-card--reduced-motion {
+    transform-style: flat !important;
+  }
+
+  /* Utility class for backface visibility */
+  .backface-hidden {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
 }

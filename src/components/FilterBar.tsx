@@ -20,15 +20,15 @@ export function FilterBar({
   projectCount,
 }: FilterBarProps) {
   return (
-    <div className="space-y-6">
+    <div className="flex-1 space-y-4">
       {/* Category Filters */}
-      <div className="flex flex-wrap gap-2 justify-center">
+      <div className="flex flex-wrap gap-2">
         <Button
           variant={selectedCategory === 'All' ? 'default' : 'outline'}
           size="sm"
           onClick={() => onCategoryChange('All')}
         >
-          All Projects
+          All
         </Button>
         {CATEGORIES.map((category) => (
           <Button
@@ -36,6 +36,7 @@ export function FilterBar({
             variant={selectedCategory === category ? 'default' : 'outline'}
             size="sm"
             onClick={() => onCategoryChange(category)}
+            className="hidden sm:inline-flex"
           >
             {category}
           </Button>
@@ -43,7 +44,7 @@ export function FilterBar({
       </div>
 
       {/* Search Bar */}
-      <div className="max-w-md mx-auto relative">
+      <div className="relative max-w-sm">
         <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
         <Input
           type="text"
@@ -56,6 +57,7 @@ export function FilterBar({
           <button
             onClick={() => onSearchChange('')}
             className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
+            aria-label="Clear search"
           >
             <X className="h-4 w-4" />
           </button>
@@ -63,8 +65,8 @@ export function FilterBar({
       </div>
 
       {/* Results Count */}
-      <p className="text-center text-sm text-muted-foreground">
-        Showing {projectCount} {projectCount === 1 ? 'project' : 'projects'}
+      <p className="text-sm text-muted-foreground">
+        {projectCount} {projectCount === 1 ? 'project' : 'projects'}
       </p>
     </div>
   );

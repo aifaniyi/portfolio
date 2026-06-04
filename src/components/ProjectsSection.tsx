@@ -1,8 +1,10 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { Container } from './Container';
 import { FilterBar } from './FilterBar';
 import { ProjectGrid } from './ProjectGrid';
 import { ProjectDetail } from './ProjectDetail';
+import { ProjectTable } from './ProjectTable';
+import { LayoutToggle, type LayoutType } from './LayoutToggle';
 import { projects } from '@/data';
 import type { Category, Project } from '@/types';
 import {
@@ -15,6 +17,21 @@ export function ProjectsSection() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [isDetailOpen, setIsDetailOpen] = useState(false);
+  const [layout, setLayout] = useState<LayoutType>(() => {
+    // Load saved layout preference from localStorage
+    if (typeof window !== 'undefined') {
+      const saved = localStorage.getItem('portfolio-layout');
+      return (saved as LayoutType) || 'grid';
+    }
+    return 'grid';
+  });
+
+  // Save layout preference to localStorage
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('portfolio-layout', layout);
+    }
+  }, [layout]);
 
   // Filter and search projects
   const filteredProjects = useMemo(() => {
@@ -79,20 +96,36 @@ export function ProjectsSection() {
             </p>
           </div>
 
-          {/* Filters */}
-          <FilterBar
-            selectedCategory={selectedCategory}
-            onCategoryChange={setSelectedCategory}
-            searchQuery={searchQuery}
-            onSearchChange={setSearchQuery}
-            projectCount={filteredProjects.length}
-          />
+          {/* Filters and Layout Toggle */}
+          <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between">
+            <FilterBar
+              selectedCategory={selectedCategory}
+              onCategoryChange={setSelectedCategory}
+              searchQuery={searchQuery}
+              onSearchChange={setSearchQuery}
+              projectCount={filteredProjects.length}
+            />
+            
+            <LayoutToggle layout={layout} onLayoutChange={setLayout} />
+          </div>
 
-          {/* Projects Grid */}
-          <ProjectGrid
-            projects={filteredProjects}
-            onProjectClick={handleProjectClick}
-          />
+          {/* Projects Display - Dynamic based on layout */}
+          {layout === 'grid' && (
+            <ProjectGrid
+              projects={filteredProjects}
+              onProjectClick={handleProjectClick}
+            />
+          )}
+          
+          {layout === 'table' && (
+            <ProjectTable
+              projects={filteredProjects}
+              onProjectClick={handleProjectClick}
+            />
+          )}
+
+          {/* Anchor for skip link */}
+          <div id="after-carousel" className="sr-only" />
 
           {/* Project Detail Modal */}
           <ProjectDetail
