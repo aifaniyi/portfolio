@@ -50,8 +50,8 @@ export function ProjectTimeline({ projects, onProjectClick }: ProjectTimelinePro
             <div key={project.id}>
               {/* Year label */}
               {showYear && (
-                <div className="relative flex items-center mb-6">
-                  <div className="absolute left-4 md:left-1/2 -translate-x-1/2 z-10 bg-primary text-primary-foreground text-xs font-bold px-2 py-0.5 rounded-full">
+                <div className="relative flex items-center justify-start md:justify-center h-6 mb-4">
+                  <div className="relative z-10 bg-primary text-primary-foreground text-xs font-bold px-2 py-0.5 rounded-full ml-4 md:ml-0">
                     {year}
                   </div>
                 </div>
