@@ -5,19 +5,18 @@ import { useTheme } from '@/hooks/useTheme';
 export function ThemeToggle() {
   const { theme, setTheme } = useTheme();
 
-  const toggleTheme = () => {
-    if (theme === 'light') {
-      setTheme('dark');
-    } else if (theme === 'dark') {
-      setTheme('system');
-    } else {
-      setTheme('light');
-    }
-  };
+  const isDark =
+    theme === 'dark' ||
+    (theme === 'system' &&
+      window.matchMedia('(prefers-color-scheme: dark)').matches);
 
   return (
-    <Button variant="ghost" size="icon" onClick={toggleTheme}>
-      {theme === 'dark' ? (
+    <Button
+      variant="ghost"
+      size="icon"
+      onClick={() => setTheme(isDark ? 'light' : 'dark')}
+    >
+      {isDark ? (
         <Moon className="h-5 w-5" />
       ) : (
         <Sun className="h-5 w-5" />

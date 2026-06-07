@@ -1,7 +1,7 @@
 import { useState, useMemo, useEffect } from 'react';
 import { Container } from './Container';
 import { FilterBar } from './FilterBar';
-import { ProjectGrid } from './ProjectGrid';
+import { ProjectTimeline } from './ProjectTimeline';
 import { ProjectDetail } from './ProjectDetail';
 import { ProjectTable } from './ProjectTable';
 import { LayoutToggle, type LayoutType } from './LayoutToggle';
@@ -21,9 +21,9 @@ export function ProjectsSection() {
     // Load saved layout preference from localStorage
     if (typeof window !== 'undefined') {
       const saved = localStorage.getItem('portfolio-layout');
-      return (saved as LayoutType) || 'grid';
+      return (saved as LayoutType) || 'timeline';
     }
-    return 'grid';
+    return 'timeline';
   });
 
   // Save layout preference to localStorage
@@ -110,8 +110,8 @@ export function ProjectsSection() {
           </div>
 
           {/* Projects Display - Dynamic based on layout */}
-          {layout === 'grid' && (
-            <ProjectGrid
+          {layout === 'timeline' && (
+            <ProjectTimeline
               projects={filteredProjects}
               onProjectClick={handleProjectClick}
             />

@@ -1,8 +1,8 @@
 import { Button } from '@/components/ui/button';
-import { Grid3x3, Table2 } from 'lucide-react';
+import { Table2, Clock } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
-export type LayoutType = 'grid' | 'table';
+export type LayoutType = 'table' | 'timeline';
 
 interface LayoutToggleProps {
   layout: LayoutType;
@@ -25,18 +25,18 @@ export function LayoutToggle({
       aria-label="Layout view options"
     >
       <Button
-        variant={layout === 'grid' ? 'default' : 'ghost'}
+        variant={layout === 'timeline' ? 'default' : 'ghost'}
         size="sm"
-        onClick={() => onLayoutChange('grid')}
+        onClick={() => onLayoutChange('timeline')}
         className="gap-2"
         role="tab"
-        aria-selected={layout === 'grid'}
-        aria-label="Grid view"
+        aria-selected={layout === 'timeline'}
+        aria-label="Timeline view"
       >
-        <Grid3x3 className="h-4 w-4" />
-        <span className="hidden sm:inline">Grid</span>
+        <Clock className="h-4 w-4" />
+        <span className="hidden sm:inline">Timeline</span>
       </Button>
-      
+
       <Button
         variant={layout === 'table' ? 'default' : 'ghost'}
         size="sm"
