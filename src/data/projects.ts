@@ -3,7 +3,7 @@ import type { Project } from '@/types';
 export const projects: Project[] = [
   {
     id: 'microservices-platform',
-    title: 'Microservices Image Transformation Platform',
+    title: 'Image Transformation Platform',
     description:
       'Built a scalable image transformation platform using microservices architecture with Golang, React, Kafka, ElasticSearch and Kubernetes.',
     longDescription:
@@ -21,13 +21,17 @@ export const projects: Project[] = [
       'Docker',
       'AWS',
     ],
-    thumbnail: '/projects/microservices-thumb.jpg',
-    images: ['/projects/microservices-1.jpg', '/projects/microservices-2.jpg'],
+    thumbnail:
+      'https://resyze.aoilabs.net/cdn/10dcb518-6af7-4a0d-9752-14d2ff0f8917/e6812bf7-88b1-41ec-b6e6-9f17f5b194d1?w=100&h=100',
+    images: [
+      'https://resyze.aoilabs.net/cdn/10dcb518-6af7-4a0d-9752-14d2ff0f8917/e6812bf7-88b1-41ec-b6e6-9f17f5b194d1',
+      'https://resyze.aoilabs.net/cdn/10dcb518-6af7-4a0d-9752-14d2ff0f8917/e6812bf7-88b1-41ec-b6e6-9f17f5b194d1',
+    ],
     demoUrl: 'https://resyze.aoilabs.net/landing',
     githubUrl: 'https://github.com/aifaniyi/resyze-api',
     featured: true,
     status: 'completed',
-    publishDate: '2024-01-15',
+    publishDate: '2025-01-15',
     challenges:
       'Managing inter-service communication, handling distributed transactions, and ensuring data consistency across services.',
     solutions:
@@ -69,7 +73,7 @@ public class OrderService {
       'TimescaleDB',
     ],
     thumbnail: '/projects/analytics-thumb.jpg',
-    githubUrl: 'https://github.com/example/realtime-dashboard',
+    // githubUrl: 'https://github.com/example/realtime-dashboard',
     featured: false,
     status: 'completed',
     publishDate: '2023-11-20',
@@ -84,17 +88,18 @@ public class OrderService {
     id: 'kubernetes-cicd-pipeline',
     title: 'Kubernetes CI/CD Pipeline',
     description:
-      'Automated deployment pipeline using GitLab CI, ArgoCD, and Kubernetes for 50+ microservices.',
+      'Automated deployment pipeline using GitLab CI, ArgoCD, and Kubernetes.',
     longDescription:
       'Built a comprehensive CI/CD pipeline that automates testing, building, and deployment of microservices to Kubernetes clusters. Integrated security scanning, automated rollbacks, and blue-green deployments.',
     category: 'DevOps/SRE',
     tags: ['Kubernetes', 'Docker', 'GitLab CI', 'ArgoCD', 'Helm', 'Terraform'],
     thumbnail: '/projects/cicd-thumb.jpg',
-    githubUrl: 'https://github.com/example/k8s-cicd',
-    documentationUrl: 'https://docs.example.com/cicd',
+    // githubUrl: 'https://github.com/example/k8s-cicd',
+    // documentationUrl: 'https://docs.example.com/cicd',
+    demoUrl: 'https://argocd.aoilabs.net',
     featured: true,
     status: 'completed',
-    publishDate: '2024-02-10',
+    publishDate: '2024-01-02',
     challenges:
       'Managing complex deployment workflows, ensuring zero-downtime deployments, and maintaining deployment consistency across environments.',
     solutions:
@@ -150,7 +155,7 @@ spec:
     // githubUrl: 'https://github.com/example/observability-stack',
     featured: true,
     status: 'completed',
-    publishDate: '2023-12-05',
+    publishDate: '2024-12-05',
     // challenges:
     //   'Collecting metrics from diverse sources, correlating logs and traces, and managing storage costs for high-volume telemetry data.',
     // solutions:
@@ -218,7 +223,7 @@ spec:
     category: 'Data Engineering',
     tags: ['Apache Airflow', 'Apache Spark', 'Python', 'AWS S3', 'Databricks'],
     thumbnail: '/projects/etl-thumb.jpg',
-    githubUrl: 'https://github.com/example/data-pipeline',
+    // githubUrl: 'https://github.com/example/data-pipeline',
     featured: true,
     status: 'completed',
     publishDate: '2017-01-20',
@@ -261,7 +266,7 @@ with DAG('data_pipeline', schedule_interval='@daily') as dag:
       'Kubernetes',
     ],
     thumbnail: '/projects/streaming-thumb.jpg',
-    githubUrl: 'https://github.com/example/streaming-analytics',
+    // githubUrl: 'https://github.com/example/streaming-analytics',
     featured: false,
     status: 'completed',
     publishDate: '2023-09-10',
@@ -289,10 +294,10 @@ with DAG('data_pipeline', schedule_interval='@daily') as dag:
       'CloudFormation',
     ],
     thumbnail: '/projects/aws-multi-thumb.jpg',
-    githubUrl: 'https://github.com/example/aws-multi-account',
+    // githubUrl: 'https://github.com/example/aws-multi-account',
     featured: true,
     status: 'completed',
-    publishDate: '2024-02-28',
+    publishDate: '2022-02-28',
     challenges:
       'Managing IAM permissions across accounts, implementing centralized logging and monitoring, and ensuring compliance.',
     solutions:
@@ -326,12 +331,12 @@ with DAG('data_pipeline', schedule_interval='@daily') as dag:
     description:
       'Created a comprehensive library of reusable Terraform modules for AWS infrastructure provisioning.',
     longDescription:
-      'Developed and maintained 30+ Terraform modules following best practices for versioning, testing, and documentation.',
+      'Developed and maintained Terraform modules following best practices for versioning, testing, and documentation.',
     category: 'Cloud Infrastructure',
-    tags: ['Terraform', 'AWS', 'Terratest', 'Go', 'GitLab CI', 'S3'],
+    tags: ['Terraform', 'AWS', 'Go', 'GitLab CI', 'S3'],
     thumbnail: '/projects/terraform-thumb.jpg',
-    githubUrl: 'https://github.com/example/terraform-modules',
-    documentationUrl: 'https://terraform-docs.example.com',
+    githubUrl: 'https://github.com/aifaniyi/iac-with-terraform-on-aws',
+    // documentationUrl: 'https://terraform-docs.example.com',
     featured: true,
     status: 'completed',
     publishDate: '2023-11-30',
