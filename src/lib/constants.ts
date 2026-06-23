@@ -9,19 +9,15 @@ export const CATEGORIES: Category[] = [
   // 'Networking',
 ];
 
-export const CATEGORY_DESCRIPTIONS: Record<Category, string> = {
+export const CATEGORY_DESCRIPTIONS: Partial<Record<Category, string>> = {
   'Software Development':
     'Full-stack applications, microservices, and modern web development',
   'DevOps/SRE':
     'CI/CD pipelines, automation, monitoring, and site reliability engineering',
-  // 'Platform Engineering':
-  //   'Internal developer platforms, service mesh, and infrastructure abstractions',
   'Data Engineering':
     'Data pipelines, ETL processes, streaming analytics, and big data systems',
   'Cloud Infrastructure':
     'Cloud architecture, IaC, multi-account strategies, and cloud optimization',
-  // Networking:
-  //   'Network automation, SDN, infrastructure connectivity, and network security',
 };
 
 export const APP_CONFIG = {
