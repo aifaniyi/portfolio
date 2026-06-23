@@ -26,7 +26,7 @@ export const contactInfo = {
 
 export const personalInfo = {
   name: 'Akinwale Ifaniyi',
-  title: 'Software Engineer | Cloud Infrastructure | DevOps | Data Engineering',
+  title: 'Software Engineer | Cloud | DevOps | Data Engineer',
   tagline:
     'Building scalable systems and infrastructure with expertise in cloud platforms, DevOps, and modern software development',
   bio: `Passionate technologist with expertise spanning software development, DevOps/SRE, platform engineering, data engineering, cloud infrastructure, and networking. 

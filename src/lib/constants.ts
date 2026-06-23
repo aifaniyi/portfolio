@@ -3,10 +3,10 @@ import type { Category } from '@/types';
 export const CATEGORIES: Category[] = [
   'Software Development',
   'DevOps/SRE',
-  'Platform Engineering',
+  // 'Platform Engineering',
   'Data Engineering',
   'Cloud Infrastructure',
-  'Networking',
+  // 'Networking',
 ];
 
 export const CATEGORY_DESCRIPTIONS: Record<Category, string> = {
@@ -14,25 +14,25 @@ export const CATEGORY_DESCRIPTIONS: Record<Category, string> = {
     'Full-stack applications, microservices, and modern web development',
   'DevOps/SRE':
     'CI/CD pipelines, automation, monitoring, and site reliability engineering',
-  'Platform Engineering':
-    'Internal developer platforms, service mesh, and infrastructure abstractions',
+  // 'Platform Engineering':
+  //   'Internal developer platforms, service mesh, and infrastructure abstractions',
   'Data Engineering':
     'Data pipelines, ETL processes, streaming analytics, and big data systems',
   'Cloud Infrastructure':
     'Cloud architecture, IaC, multi-account strategies, and cloud optimization',
-  Networking:
-    'Network automation, SDN, infrastructure connectivity, and network security',
+  // Networking:
+  //   'Network automation, SDN, infrastructure connectivity, and network security',
 };
 
 export const APP_CONFIG = {
   siteName: 'Portfolio',
   siteDescription:
     'Technical portfolio showcasing projects in software development, DevOps, cloud infrastructure, and more',
-  siteUrl: 'https://yourportfolio.com',
-  author: 'Your Name',
+  siteUrl: 'https://d1vrdtnb8uq02n.cloudfront.net/',
+  author: 'Akinwale Ifaniyi',
   social: {
-    github: 'yourusername',
-    linkedin: 'yourusername',
-    twitter: 'yourusername',
+    github: 'https://github.com/aifaniyi',
+    linkedin: 'https://www.linkedin.com/in/akinwale-ifaniyi-a865b861',
+    // twitter: 'https://twitter.com/yourusername',
   },
 };

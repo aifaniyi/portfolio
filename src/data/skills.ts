@@ -17,8 +17,8 @@ export const skills: Skill[] = [
   {
     name: 'TypeScript',
     category: 'Languages',
-    proficiency: proficiencyByYears(yearsOfExperience(2018)),
-    yearsOfExperience: yearsOfExperience(2018),
+    proficiency: proficiencyByYears(yearsOfExperience(2023)),
+    yearsOfExperience: yearsOfExperience(2023),
   },
   {
     name: 'JavaScript',
@@ -29,8 +29,8 @@ export const skills: Skill[] = [
   {
     name: 'Python',
     category: 'Languages',
-    proficiency: proficiencyByYears(yearsOfExperience(2018)),
-    yearsOfExperience: yearsOfExperience(2018),
+    proficiency: proficiencyByYears(yearsOfExperience(2023)),
+    yearsOfExperience: yearsOfExperience(2023),
   },
   {
     name: 'Java',
@@ -85,8 +85,8 @@ export const skills: Skill[] = [
   {
     name: 'FastAPI',
     category: 'Frameworks',
-    proficiency: proficiencyByYears(yearsOfExperience(2023)),
-    yearsOfExperience: yearsOfExperience(2023),
+    proficiency: proficiencyByYears(yearsOfExperience(2024)),
+    yearsOfExperience: yearsOfExperience(2024),
   },
   {
     name: 'Next.js',
@@ -153,14 +153,14 @@ export const skills: Skill[] = [
   {
     name: 'Prometheus',
     category: 'DevOps & Tools',
-    proficiency: proficiencyByYears(yearsOfExperience(2015)),
-    yearsOfExperience: yearsOfExperience(2015),
+    proficiency: proficiencyByYears(yearsOfExperience(2023)),
+    yearsOfExperience: yearsOfExperience(2023),
   },
   {
     name: 'Grafana',
     category: 'DevOps & Tools',
-    proficiency: proficiencyByYears(yearsOfExperience(2015)),
-    yearsOfExperience: yearsOfExperience(2015),
+    proficiency: proficiencyByYears(yearsOfExperience(2023)),
+    yearsOfExperience: yearsOfExperience(2023),
   },
   // {
   //   name: 'Datadog',
@@ -223,8 +223,8 @@ export const skills: Skill[] = [
   {
     name: 'Redis',
     category: 'Databases',
-    proficiency: proficiencyByYears(yearsOfExperience(2024)),
-    yearsOfExperience: yearsOfExperience(2024),
+    proficiency: proficiencyByYears(yearsOfExperience(2020)),
+    yearsOfExperience: yearsOfExperience(2020),
   },
   {
     name: 'MySQL',
@@ -279,8 +279,8 @@ export const skills: Skill[] = [
   {
     name: 'RabbitMQ',
     category: 'Other',
-    proficiency: proficiencyByYears(yearsOfExperience(2023)),
-    yearsOfExperience: yearsOfExperience(2023),
+    proficiency: proficiencyByYears(yearsOfExperience(2024)),
+    yearsOfExperience: yearsOfExperience(2024),
   },
   // {
   //   name: 'GraphQL',
@@ -297,8 +297,8 @@ export const skills: Skill[] = [
   {
     name: 'gRPC',
     category: 'Other',
-    proficiency: proficiencyByYears(yearsOfExperience(2018)),
-    yearsOfExperience: yearsOfExperience(2018),
+    proficiency: proficiencyByYears(yearsOfExperience(2022)),
+    yearsOfExperience: yearsOfExperience(2022),
   },
   {
     name: 'Microservices Architecture',
@@ -315,8 +315,8 @@ export const skills: Skill[] = [
   {
     name: 'System Design',
     category: 'Other',
-    proficiency: proficiencyByYears(yearsOfExperience(2016)),
-    yearsOfExperience: yearsOfExperience(2016),
+    proficiency: proficiencyByYears(yearsOfExperience(2020)),
+    yearsOfExperience: yearsOfExperience(2020),
   },
 ];
 
