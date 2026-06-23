@@ -1,9 +1,20 @@
 import { ExternalLink, Github } from 'lucide-react';
-import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@/components/ui/card';
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,
+  CardFooter,
+} from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import type { Project } from '@/types';
-import { getCategoryColor, formatDate } from '@/lib/project-utils';
+import {
+  getCategoryColor,
+  getProjectThumbnail,
+  formatDate,
+} from '@/lib/project-utils';
 
 interface ProjectCardProps {
   project: Project;
@@ -19,19 +30,26 @@ export function ProjectCard({ project, onClick }: ProjectCardProps) {
   };
 
   return (
-    <Card 
+    <Card
       className="group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
       onClick={onClick}
     >
       {/* Thumbnail */}
       <div className="relative h-40 overflow-hidden rounded-t-lg bg-muted">
         <img
-          src={`https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=300&fit=crop`}
+          src={getProjectThumbnail(project, 400, 300)}
           alt={project.title}
           className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
           onError={(e) => {
             const target = e.target as HTMLImageElement;
-            target.src = `https://placehold.co/400x300/3b82f6/ffffff?text=${encodeURIComponent(project.category)}`;
+            const fallback = `https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=300&fit=crop`;
+            const placeholder = `https://placehold.co/400x300/3b82f6/ffffff?text=${encodeURIComponent(project.category)}`;
+
+            if (target.src.includes('images.unsplash.com')) {
+              target.src = placeholder;
+            } else {
+              target.src = fallback;
+            }
           }}
         />
         {project.featured && (
@@ -43,8 +61,8 @@ export function ProjectCard({ project, onClick }: ProjectCardProps) {
 
       <CardHeader className="p-4">
         <div className="flex items-start justify-between gap-2 mb-1.5">
-          <Badge 
-            variant="outline" 
+          <Badge
+            variant="outline"
             className={`${getCategoryColor(project.category)} text-white border-0 text-xs`}
           >
             {project.category}
@@ -64,7 +82,11 @@ export function ProjectCard({ project, onClick }: ProjectCardProps) {
       <CardContent className="p-4 pt-0">
         <div className="flex flex-wrap gap-1.5">
           {project.tags.slice(0, 3).map((tag) => (
-            <Badge key={tag} variant="secondary" className="text-xs px-2 py-0.5">
+            <Badge
+              key={tag}
+              variant="secondary"
+              className="text-xs px-2 py-0.5"
+            >
               {tag}
             </Badge>
           ))}

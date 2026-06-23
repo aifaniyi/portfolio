@@ -3,17 +3,28 @@ import type { Project } from '@/types';
 export const projects: Project[] = [
   {
     id: 'microservices-platform',
-    title: 'Microservices E-Commerce Platform',
+    title: 'Microservices Image Transformation Platform',
     description:
-      'Built a scalable e-commerce platform using microservices architecture with Spring Boot, React, and Kubernetes.',
+      'Built a scalable image transformation platform using microservices architecture with Golang, React, Kafka, ElasticSearch and Kubernetes.',
     longDescription:
-      'Designed and implemented a cloud-native e-commerce platform using microservices architecture. The system handles 10,000+ concurrent users with 99.9% uptime. Implemented service mesh for communication, distributed tracing, and automated CI/CD pipelines.',
+      'Designed and implemented a cloud-native image transformation platform using microservices architecture and an automated CI/CD pipeline.',
     category: 'Software Development',
-    tags: ['Java', 'Spring Boot', 'React', 'TypeScript', 'PostgreSQL', 'Redis', 'Kafka'],
+    tags: [
+      'Golang',
+      'React',
+      'TypeScript',
+      'PostgreSQL',
+      'Redis',
+      'Kafka',
+      'ElasticSearch',
+      'Kubernetes',
+      'Docker',
+      'AWS',
+    ],
     thumbnail: '/projects/microservices-thumb.jpg',
     images: ['/projects/microservices-1.jpg', '/projects/microservices-2.jpg'],
-    demoUrl: 'https://demo.example.com',
-    githubUrl: 'https://github.com/example/microservices-platform',
+    demoUrl: 'https://resyze.aoilabs.net/landing',
+    githubUrl: 'https://github.com/aifaniyi/resyze-api',
     featured: true,
     status: 'completed',
     publishDate: '2024-01-15',
@@ -25,7 +36,7 @@ export const projects: Project[] = [
       'Reduced deployment time by 70%, improved system scalability to handle 5x traffic, and reduced infrastructure costs by 40%.',
     codeSnippets: [
       {
-        language: 'java',
+        language: 'golang',
         code: `@Service
 public class OrderService {
     private final KafkaTemplate<String, OrderEvent> kafkaTemplate;
@@ -49,7 +60,14 @@ public class OrderService {
     longDescription:
       'Created an interactive dashboard that processes and visualizes streaming data in real-time. Handles millions of events per hour with sub-second latency.',
     category: 'Software Development',
-    tags: ['React', 'TypeScript', 'D3.js', 'WebSocket', 'Node.js', 'TimescaleDB'],
+    tags: [
+      'React',
+      'TypeScript',
+      'D3.js',
+      'WebSocket',
+      'Node.js',
+      'TimescaleDB',
+    ],
     thumbnail: '/projects/analytics-thumb.jpg',
     githubUrl: 'https://github.com/example/realtime-dashboard',
     featured: false,
@@ -110,89 +128,109 @@ spec:
     id: 'observability-stack',
     title: 'Observability Stack Implementation',
     description:
-      'Implemented comprehensive observability using Prometheus, Grafana, Loki, and Tempo for distributed tracing.',
+      'Implemented comprehensive observability using Prometheus and Grafana.',
     longDescription:
-      'Designed and deployed a full observability stack to monitor 100+ services across multiple Kubernetes clusters. Integrated metrics, logs, and traces for complete system visibility.',
+      'Designed and deployed a full observability stack to monitor services across Kubernetes clusters. Integrated metrics, logs, and traces for complete system visibility.',
     category: 'DevOps/SRE',
-    tags: ['Prometheus', 'Grafana', 'Loki', 'Tempo', 'OpenTelemetry', 'Kubernetes'],
-    thumbnail: '/projects/observability-thumb.jpg',
-    githubUrl: 'https://github.com/example/observability-stack',
+    tags: [
+      'Prometheus',
+      'Grafana',
+      // 'Loki',
+      // 'Tempo',
+      // 'OpenTelemetry',
+      'Kubernetes',
+    ],
+    thumbnail:
+      'https://resyze.aoilabs.net/cdn/10dcb518-6af7-4a0d-9752-14d2ff0f8917/ace986cc-44ca-4f5c-9c55-3a398a85dc9e?w=100&h=100',
+    images: [
+      'https://resyze.aoilabs.net/cdn/10dcb518-6af7-4a0d-9752-14d2ff0f8917/ace986cc-44ca-4f5c-9c55-3a398a85dc9e',
+      'https://resyze.aoilabs.net/cdn/10dcb518-6af7-4a0d-9752-14d2ff0f8917/05f1c6de-7ac4-48d6-b97c-817b78b11980',
+    ],
+    demoUrl: 'https://grafana.aoilabs.net',
+    // githubUrl: 'https://github.com/example/observability-stack',
     featured: true,
     status: 'completed',
     publishDate: '2023-12-05',
-    challenges:
-      'Collecting metrics from diverse sources, correlating logs and traces, and managing storage costs for high-volume telemetry data.',
-    solutions:
-      'Implemented metric aggregation and sampling, used Loki for log aggregation, and deployed Tempo for distributed tracing.',
-    outcomes:
-      'Reduced MTTR by 65%, improved system visibility, and enabled proactive issue detection.',
+    // challenges:
+    //   'Collecting metrics from diverse sources, correlating logs and traces, and managing storage costs for high-volume telemetry data.',
+    // solutions:
+    //   'Implemented metric aggregation and sampling, used Loki for log aggregation, and deployed Tempo for distributed tracing.',
+    // outcomes:
+    //   'Reduced MTTR by 65%, improved system visibility, and enabled proactive issue detection.',
   },
-  {
-    id: 'internal-developer-platform',
-    title: 'Internal Developer Platform',
-    description:
-      'Built an IDP using Backstage, enabling self-service infrastructure provisioning and deployment.',
-    longDescription:
-      'Created a unified developer portal that streamlines infrastructure provisioning, service deployment, and documentation. Integrated with existing tools like Kubernetes, Terraform, and GitLab.',
-    category: 'Platform Engineering',
-    tags: ['Backstage', 'Node.js', 'React', 'Kubernetes', 'Terraform', 'PostgreSQL'],
-    thumbnail: '/projects/idp-thumb.jpg',
-    demoUrl: 'https://developer-portal.example.com',
-    githubUrl: 'https://github.com/example/developer-platform',
-    featured: true,
-    status: 'in-progress',
-    publishDate: '2024-03-01',
-    challenges:
-      'Integrating multiple tools and services, creating intuitive self-service workflows, and maintaining platform security.',
-    solutions:
-      'Built custom Backstage plugins, implemented RBAC, and created reusable templates for common infrastructure patterns.',
-    outcomes:
-      'Reduced onboarding time for new developers by 50%, decreased infrastructure provisioning time from days to minutes.',
-  },
-  {
-    id: 'service-mesh-migration',
-    title: 'Service Mesh Migration with Istio',
-    description:
-      'Migrated 60+ microservices to Istio service mesh for improved security, observability, and traffic management.',
-    longDescription:
-      'Led the migration of a large microservices architecture to Istio service mesh. Implemented mTLS, advanced traffic routing, and circuit breaking.',
-    category: 'Platform Engineering',
-    tags: ['Istio', 'Kubernetes', 'Envoy', 'Go', 'Prometheus', 'Grafana'],
-    thumbnail: '/projects/service-mesh-thumb.jpg',
-    githubUrl: 'https://github.com/example/istio-migration',
-    featured: false,
-    status: 'completed',
-    publishDate: '2023-10-15',
-    challenges:
-      'Zero-downtime migration, managing service mesh complexity, and training teams on new patterns.',
-    solutions:
-      'Implemented gradual rollout strategy, created comprehensive documentation, and built custom operators for common patterns.',
-    outcomes:
-      'Achieved 100% mTLS encryption, improved observability, and reduced latency by 20%.',
-  },
+  // {
+  //   id: 'internal-developer-platform',
+  //   title: 'Internal Developer Platform',
+  //   description:
+  //     'Built an IDP using Backstage, enabling self-service infrastructure provisioning and deployment.',
+  //   longDescription:
+  //     'Created a unified developer portal that streamlines infrastructure provisioning, service deployment, and documentation. Integrated with existing tools like Kubernetes, Terraform, and GitLab.',
+  //   category: 'Platform Engineering',
+  //   tags: [
+  //     'Backstage',
+  //     'Node.js',
+  //     'React',
+  //     'Kubernetes',
+  //     'Terraform',
+  //     'PostgreSQL',
+  //   ],
+  //   thumbnail: '/projects/idp-thumb.jpg',
+  //   demoUrl: 'https://developer-portal.example.com',
+  //   githubUrl: 'https://github.com/example/developer-platform',
+  //   featured: true,
+  //   status: 'in-progress',
+  //   publishDate: '2024-03-01',
+  //   challenges:
+  //     'Integrating multiple tools and services, creating intuitive self-service workflows, and maintaining platform security.',
+  //   solutions:
+  //     'Built custom Backstage plugins, implemented RBAC, and created reusable templates for common infrastructure patterns.',
+  //   outcomes:
+  //     'Reduced onboarding time for new developers by 50%, decreased infrastructure provisioning time from days to minutes.',
+  // },
+  // {
+  //   id: 'service-mesh-migration',
+  //   title: 'Service Mesh Migration with Istio',
+  //   description:
+  //     'Migrated 60+ microservices to Istio service mesh for improved security, observability, and traffic management.',
+  //   longDescription:
+  //     'Led the migration of a large microservices architecture to Istio service mesh. Implemented mTLS, advanced traffic routing, and circuit breaking.',
+  //   category: 'Platform Engineering',
+  //   tags: ['Istio', 'Kubernetes', 'Envoy', 'Go', 'Prometheus', 'Grafana'],
+  //   thumbnail: '/projects/service-mesh-thumb.jpg',
+  //   githubUrl: 'https://github.com/example/istio-migration',
+  //   featured: false,
+  //   status: 'completed',
+  //   publishDate: '2023-10-15',
+  //   challenges:
+  //     'Zero-downtime migration, managing service mesh complexity, and training teams on new patterns.',
+  //   solutions:
+  //     'Implemented gradual rollout strategy, created comprehensive documentation, and built custom operators for common patterns.',
+  //   outcomes:
+  //     'Achieved 100% mTLS encryption, improved observability, and reduced latency by 20%.',
+  // },
   {
     id: 'data-pipeline-etl',
     title: 'Scalable ETL Data Pipeline',
     description:
-      'Built a distributed ETL pipeline using Apache Airflow, Spark, and Delta Lake processing 50TB+ daily.',
+      'Built a distributed ETL pipeline using Apache Airflow, Spark, and Amazon S3 processing between 500GB and 1TB+ CDN logs daily.',
     longDescription:
-      'Designed and implemented a scalable data pipeline that ingests data from multiple sources, processes it using Spark, and stores it in Delta Lake for analytics.',
+      'Designed and implemented a scalable data pipeline that ingests data from multiple sources (S3, SFTP, ...), transforms it using Spark, and stores it in S3 for later analytics using SparkSQL.',
     category: 'Data Engineering',
-    tags: ['Apache Airflow', 'Apache Spark', 'Delta Lake', 'Python', 'AWS S3', 'Databricks'],
+    tags: ['Apache Airflow', 'Apache Spark', 'Python', 'AWS S3', 'Databricks'],
     thumbnail: '/projects/etl-thumb.jpg',
     githubUrl: 'https://github.com/example/data-pipeline',
     featured: true,
     status: 'completed',
-    publishDate: '2024-01-20',
+    publishDate: '2017-01-20',
     challenges:
       'Handling data quality issues, managing pipeline failures, and optimizing for cost and performance.',
     solutions:
       'Implemented data validation framework, created automated retry mechanisms, and optimized Spark jobs for performance.',
     outcomes:
-      'Reduced data processing time by 60%, improved data quality to 99.9%, and decreased infrastructure costs by 35%.',
+      'Reduced data processing time by 60%, improved data quality to 99.9%.',
     codeSnippets: [
       {
-        language: 'python',
+        language: 'Python',
         code: `from airflow import DAG
 from airflow.providers.apache.spark.operators.spark_submit import SparkSubmitOperator
 
@@ -210,11 +248,18 @@ with DAG('data_pipeline', schedule_interval='@daily') as dag:
     id: 'streaming-analytics',
     title: 'Real-time Streaming Analytics',
     description:
-      'Implemented real-time data processing using Apache Kafka, Flink, and ClickHouse for event analytics.',
+      'Implemented real-time data processing using Apache Kafka, Spark, and Elasticsearch for event analytics.',
     longDescription:
-      'Built a real-time analytics platform that processes millions of events per second using Kafka Streams and Apache Flink.',
+      'Built a real-time analytics platform that processes millions of events per second using Kafka Streams and Apache Spark.',
     category: 'Data Engineering',
-    tags: ['Apache Kafka', 'Apache Flink', 'ClickHouse', 'Python', 'Docker', 'Kubernetes'],
+    tags: [
+      'Apache Kafka',
+      'Apache Spark',
+      'Elasticsearch',
+      'Python',
+      'Docker',
+      'Kubernetes',
+    ],
     thumbnail: '/projects/streaming-thumb.jpg',
     githubUrl: 'https://github.com/example/streaming-analytics',
     featured: false,
@@ -223,7 +268,7 @@ with DAG('data_pipeline', schedule_interval='@daily') as dag:
     challenges:
       'Handling late-arriving data, managing state in distributed processing, and ensuring exactly-once semantics.',
     solutions:
-      'Implemented watermarking for late data, used Flink state backends, and configured Kafka transactions.',
+      'Implemented watermarking for late data, used Spark state backends, and configured Kafka transactions.',
     outcomes:
       'Enabled real-time business insights, processed 10M+ events per hour with sub-second latency.',
   },
@@ -235,7 +280,14 @@ with DAG('data_pipeline', schedule_interval='@daily') as dag:
     longDescription:
       'Created a scalable AWS multi-account setup following best practices for security, compliance, and cost management across 50+ AWS accounts.',
     category: 'Cloud Infrastructure',
-    tags: ['AWS', 'Terraform', 'AWS Organizations', 'Control Tower', 'IAM', 'CloudFormation'],
+    tags: [
+      'AWS',
+      'Terraform',
+      'AWS Organizations',
+      'Control Tower',
+      'IAM',
+      'CloudFormation',
+    ],
     thumbnail: '/projects/aws-multi-thumb.jpg',
     githubUrl: 'https://github.com/example/aws-multi-account',
     featured: true,
@@ -290,46 +342,46 @@ with DAG('data_pipeline', schedule_interval='@daily') as dag:
     outcomes:
       'Reduced infrastructure provisioning time by 75%, improved consistency across environments.',
   },
-  {
-    id: 'network-automation',
-    title: 'Network Automation Framework',
-    description:
-      'Automated network configuration and monitoring using Ansible, Python, and NetBox.',
-    longDescription:
-      'Built a network automation framework that manages 200+ network devices including routers, switches, and firewalls.',
-    category: 'Networking',
-    tags: ['Ansible', 'Python', 'NetBox', 'NAPALM', 'Cisco', 'Juniper'],
-    thumbnail: '/projects/network-automation-thumb.jpg',
-    githubUrl: 'https://github.com/example/network-automation',
-    featured: true,
-    status: 'completed',
-    publishDate: '2023-08-15',
-    challenges:
-      'Managing diverse network device vendors, ensuring configuration consistency, and handling network changes safely.',
-    solutions:
-      'Used NAPALM for vendor-agnostic APIs, implemented dry-run mode, and created rollback mechanisms.',
-    outcomes:
-      'Reduced network configuration time by 90%, eliminated configuration drift, and improved compliance.',
-  },
-  {
-    id: 'sdn-implementation',
-    title: 'Software-Defined Networking with OpenFlow',
-    description:
-      'Implemented SDN solution using OpenFlow and custom controller for dynamic network management.',
-    longDescription:
-      'Designed and deployed an SDN architecture that provides centralized network control and programmability.',
-    category: 'Networking',
-    tags: ['OpenFlow', 'Python', 'Open vSwitch', 'SDN', 'Kubernetes', 'Docker'],
-    thumbnail: '/projects/sdn-thumb.jpg',
-    githubUrl: 'https://github.com/example/sdn-controller',
-    featured: false,
-    status: 'completed',
-    publishDate: '2023-07-20',
-    challenges:
-      'Ensuring high availability of the controller, managing flow rules efficiently, and integrating with existing network.',
-    solutions:
-      'Implemented controller clustering, optimized flow rule installation, and created migration plan.',
-    outcomes:
-      'Improved network agility, reduced provisioning time from hours to seconds.',
-  },
+  // {
+  //   id: 'network-automation',
+  //   title: 'Network Automation Framework',
+  //   description:
+  //     'Automated network configuration and monitoring using Ansible, Python, and NetBox.',
+  //   longDescription:
+  //     'Built a network automation framework that manages 200+ network devices including routers, switches, and firewalls.',
+  //   category: 'Networking',
+  //   tags: ['Ansible', 'Python', 'NetBox', 'NAPALM', 'Cisco', 'Juniper'],
+  //   thumbnail: '/projects/network-automation-thumb.jpg',
+  //   githubUrl: 'https://github.com/example/network-automation',
+  //   featured: true,
+  //   status: 'completed',
+  //   publishDate: '2023-08-15',
+  //   challenges:
+  //     'Managing diverse network device vendors, ensuring configuration consistency, and handling network changes safely.',
+  //   solutions:
+  //     'Used NAPALM for vendor-agnostic APIs, implemented dry-run mode, and created rollback mechanisms.',
+  //   outcomes:
+  //     'Reduced network configuration time by 90%, eliminated configuration drift, and improved compliance.',
+  // },
+  // {
+  //   id: 'sdn-implementation',
+  //   title: 'Software-Defined Networking with OpenFlow',
+  //   description:
+  //     'Implemented SDN solution using OpenFlow and custom controller for dynamic network management.',
+  //   longDescription:
+  //     'Designed and deployed an SDN architecture that provides centralized network control and programmability.',
+  //   category: 'Networking',
+  //   tags: ['OpenFlow', 'Python', 'Open vSwitch', 'SDN', 'Kubernetes', 'Docker'],
+  //   thumbnail: '/projects/sdn-thumb.jpg',
+  //   githubUrl: 'https://github.com/example/sdn-controller',
+  //   featured: false,
+  //   status: 'completed',
+  //   publishDate: '2023-07-20',
+  //   challenges:
+  //     'Ensuring high availability of the controller, managing flow rules efficiently, and integrating with existing network.',
+  //   solutions:
+  //     'Implemented controller clustering, optimized flow rule installation, and created migration plan.',
+  //   outcomes:
+  //     'Improved network agility, reduced provisioning time from hours to seconds.',
+  // },
 ];

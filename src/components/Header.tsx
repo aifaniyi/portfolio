@@ -58,7 +58,7 @@ export function Header() {
       >
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
-            <div className="font-bold text-xl">Portfolio</div>
+            <div className="font-bold text-xl">A.I</div>
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center gap-8">

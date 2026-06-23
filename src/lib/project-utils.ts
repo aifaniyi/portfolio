@@ -119,6 +119,18 @@ export function getCategoryTextColor(category: Category): string {
   return colors[category] || 'text-gray-600 dark:text-gray-400';
 }
 
+export function getProjectThumbnail(
+  project: Project,
+  width: number,
+  height: number
+): string {
+  if (project.thumbnail) {
+    return project.thumbnail;
+  }
+
+  return `https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=${width}&h=${height}&fit=crop`;
+}
+
 export function formatDate(dateString: string): string {
   const date = new Date(dateString);
   return date.toLocaleDateString('en-US', {

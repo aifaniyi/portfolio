@@ -1,5 +1,5 @@
 import { personalInfo } from '@/data';
-import { Check } from 'lucide-react';
+import { Check, Award } from 'lucide-react';
 
 export function BioSection() {
   return (
@@ -25,6 +25,29 @@ export function BioSection() {
               </div>
               <span className="text-sm font-medium">{area}</span>
             </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Certifications */}
+      <div className="space-y-4">
+        <h3 className="text-xl font-semibold">Certifications</h3>
+        <div className="flex flex-wrap gap-3">
+          {personalInfo.certifications.map((cert) => (
+            <a
+              key={cert.name}
+              href={cert.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 p-3 rounded-lg bg-secondary/30 hover:bg-secondary/50 transition-colors"
+            >
+              {cert.badge ? (
+                <img src={cert.badge} alt={cert.name} className="h-12 w-12 shrink-0" />
+              ) : (
+                <Award className="h-5 w-5 text-primary shrink-0" />
+              )}
+              <span className="text-sm font-medium">{cert.name}</span>
+            </a>
           ))}
         </div>
       </div>

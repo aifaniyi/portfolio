@@ -35,13 +35,19 @@ I specialize in building and scaling distributed systems, implementing robust CI
 
 My experience includes designing microservices architectures, implementing comprehensive observability solutions, building internal developer platforms, and automating infrastructure at scale. I'm committed to continuous learning and sharing knowledge with the community.`,
   expertise: [
-    'Cloud-Native Architecture & Microservices',
+    'Software Development & Microservices',
+    'Cloud-Native Architecture & Serverless Computing',
     'CI/CD Pipeline Automation',
     'Kubernetes & Container Orchestration',
     'Infrastructure as Code (Terraform, Ansible)',
     'Site Reliability Engineering (SRE)',
     'Data Engineering & Real-time Analytics',
-    'Network Automation & SDN',
-    'Platform Engineering & Developer Experience',
+  ],
+  certifications: [
+    {
+      name: 'AWS Certified Solutions Architect – Professional',
+      url: 'https://www.credly.com/badges/ae2fa27b-dc04-4ffb-b775-63a8e9dde040/public_url',
+      badge: '/aws-certified-solutions-architect-professional.png',
+    },
   ],
 };
