@@ -32,29 +32,29 @@ export const projects: Project[] = [
     featured: true,
     status: 'completed',
     publishDate: '2025-01-15',
-    challenges:
-      'Managing inter-service communication, handling distributed transactions, and ensuring data consistency across services.',
-    solutions:
-      'Implemented Saga pattern for distributed transactions, used event sourcing with Kafka, and created comprehensive API gateway with rate limiting.',
-    outcomes:
-      'Reduced deployment time by 70%, improved system scalability to handle 5x traffic, and reduced infrastructure costs by 40%.',
-    codeSnippets: [
-      {
-        language: 'golang',
-        code: `@Service
-public class OrderService {
-    private final KafkaTemplate<String, OrderEvent> kafkaTemplate;
-    
-    @Transactional
-    public Order createOrder(OrderRequest request) {
-        Order order = orderRepository.save(createOrderEntity(request));
-        kafkaTemplate.send("orders", new OrderCreatedEvent(order));
-        return order;
-    }
-}`,
-        description: 'Event-driven order creation with Kafka',
-      },
-    ],
+    // challenges:
+    //   'Managing inter-service communication, handling distributed transactions, and ensuring data consistency across services.',
+    // solutions:
+    //   'Implemented Saga pattern for distributed transactions, used event sourcing with Kafka, and created comprehensive API gateway with rate limiting.',
+    // outcomes:
+    //   'Reduced deployment time by 70%, improved system scalability to handle 5x traffic, and reduced infrastructure costs by 40%.',
+    //     codeSnippets: [
+    //       {
+    //         language: 'golang',
+    //         code: `@Service
+    // public class OrderService {
+    //     private final KafkaTemplate<String, OrderEvent> kafkaTemplate;
+
+    //     @Transactional
+    //     public Order createOrder(OrderRequest request) {
+    //         Order order = orderRepository.save(createOrderEntity(request));
+    //         kafkaTemplate.send("orders", new OrderCreatedEvent(order));
+    //         return order;
+    //     }
+    // }`,
+    //         description: 'Event-driven order creation with Kafka',
+    //       },
+    //     ],
   },
   {
     id: 'realtime-analytics-dashboard',
