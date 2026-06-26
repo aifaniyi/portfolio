@@ -88,13 +88,19 @@ public class OrderService {
     id: 'kubernetes-cicd-pipeline',
     title: 'Kubernetes CI/CD Pipeline',
     description:
-      'Automated deployment pipeline using GitLab CI, ArgoCD, and Kubernetes.',
+      'Automated deployment pipeline using Github, ArgoCD, and Kubernetes.',
     longDescription:
       'Built a comprehensive CI/CD pipeline that automates testing, building, and deployment of microservices to Kubernetes clusters. Integrated security scanning, automated rollbacks, and blue-green deployments.',
     category: 'DevOps/SRE',
-    tags: ['Kubernetes', 'Docker', 'GitLab CI', 'ArgoCD', 'Helm', 'Terraform'],
-    thumbnail: '/projects/cicd-thumb.jpg',
-    // githubUrl: 'https://github.com/example/k8s-cicd',
+    tags: ['Kubernetes', 'Docker', 'Github', 'ArgoCD', 'Helm', 'Terraform'],
+    images: [
+      'https://resyze.aoilabs.net/cdn/10dcb518-6af7-4a0d-9752-14d2ff0f8917/d31b1ba1-de3e-4f98-820d-085e6e70724d',
+      'https://resyze.aoilabs.net/cdn/10dcb518-6af7-4a0d-9752-14d2ff0f8917/f7e610d7-4c3f-4338-a1c3-36415fdabf90',
+      'https://resyze.aoilabs.net/cdn/10dcb518-6af7-4a0d-9752-14d2ff0f8917/7c90031a-e4dc-4d94-beca-32d09c022e7c',
+    ],
+    thumbnail:
+      'https://resyze.aoilabs.net/cdn/10dcb518-6af7-4a0d-9752-14d2ff0f8917/f7e610d7-4c3f-4338-a1c3-36415fdabf90?w=100&h=100',
+    githubUrl: 'https://github.com/aifaniyi/resyze-k8s',
     // documentationUrl: 'https://docs.example.com/cicd',
     demoUrl: 'https://argocd.aoilabs.net',
     featured: true,
@@ -112,15 +118,22 @@ public class OrderService {
         code: `apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: microservice-app
+  name: resyze-apps
+  namespace: argocd
+  annotations:
+    argocd.argoproj.io/sync-wave: "0"
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
 spec:
-  destination:
-    namespace: production
-    server: https://kubernetes.default.svc
   source:
-    repoURL: https://github.com/example/helm-charts
-    targetRevision: HEAD
-    path: charts/microservice
+    repoURL: https://github.com/aifaniyi/resyze-k8s.git
+    targetRevision: main
+    path: apps
+    directory:
+      recurse: true
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: resyze
   syncPolicy:
     automated:
       prune: true
