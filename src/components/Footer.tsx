@@ -16,7 +16,7 @@ export function Footer() {
 
           {/* Copyright */}
           <p className="text-sm text-muted-foreground text-center">
-            © {new Date().getFullYear()} Portfolio. Built with React, TypeScript & Vite
+            © {new Date().getFullYear()} Akinwale Ifaniyi. All rights reserved.
           </p>
 
           {/* Back to Top */}

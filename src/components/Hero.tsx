@@ -81,7 +81,7 @@ export function Hero() {
             </Button>
           </div>
 
-          {/* Social Links */}
+          {/* Social Links & Certification Badge */}
           <div className="flex items-center justify-center gap-4 pt-8 animate-fade-in-up animation-delay-800">
             {socialLinks.map((link) => (
               <a
@@ -95,6 +95,18 @@ export function Hero() {
                 {getSocialIcon(link.platform)}
               </a>
             ))}
+            <a
+              href="https://www.credly.com/badges/ae2fa27b-dc04-4ffb-b775-63a8e9dde040/public_url"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="AWS Certified Solutions Architect – Professional"
+            >
+              <img
+                src="/aws-certified-solutions-architect-professional.png"
+                alt="AWS Certified Solutions Architect – Professional"
+                className="h-10 w-10"
+              />
+            </a>
           </div>
         </div>
       </div>

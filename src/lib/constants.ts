@@ -21,10 +21,11 @@ export const CATEGORY_DESCRIPTIONS: Partial<Record<Category, string>> = {
 };
 
 export const APP_CONFIG = {
-  siteName: 'Portfolio',
+  siteName:
+    'Akinwale Ifaniyi - Software Engineer | Cloud | DevOps | Data Engineer',
   siteDescription:
-    'Technical portfolio showcasing projects in software development, DevOps, cloud infrastructure, and more',
-  siteUrl: 'https://d1vrdtnb8uq02n.cloudfront.net/',
+    'My technical portfolio showcasing projects in software development, DevOps, cloud infrastructure, and more',
+  siteUrl: 'https://aifaniiyi.dev',
   author: 'Akinwale Ifaniyi',
   social: {
     github: 'https://github.com/aifaniyi',

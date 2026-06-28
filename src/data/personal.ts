@@ -20,7 +20,7 @@ export const socialLinks: SocialLink[] = [
 
 export const contactInfo = {
   email: 'waleifaniyi@gmail.com',
-  location: 'Calgary, AB',
+  location: 'Canada',
   availability: 'Open to opportunities',
 };
 

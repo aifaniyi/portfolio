@@ -89,13 +89,13 @@ export function ProjectTimeline({
                     <div className="flex gap-3">
                       {/* Thumbnail */}
                       <img
-                        src={getProjectThumbnail(project, 80, 80)}
+                        src={getProjectThumbnail(project, 200, 200)}
                         alt={project.title}
-                        className="w-12 h-12 rounded object-cover shrink-0"
+                        className="w-24 h-24 rounded object-cover shrink-0"
                         onError={(e) => {
                           const target = e.target as HTMLImageElement;
-                          const fallback = `https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=80&h=80&fit=crop`;
-                          const placeholder = `https://placehold.co/80x80/3b82f6/ffffff?text=${encodeURIComponent(project.category.charAt(0))}`;
+                          const fallback = `https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=200&h=200&fit=crop`;
+                          const placeholder = `https://placehold.co/200x200/3b82f6/ffffff?text=${encodeURIComponent(project.category.charAt(0))}`;
 
                           if (target.src.includes('images.unsplash.com')) {
                             target.src = placeholder;

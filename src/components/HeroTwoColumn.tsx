@@ -88,7 +88,7 @@ export function HeroTwoColumn() {
               </Button>
             </div>
 
-            {/* Social Links */}
+            {/* Social Links & Certification */}
             <div className="flex items-center justify-center lg:justify-start gap-4 pt-4 animate-fade-in-up animation-delay-800">
               {socialLinks.map((link) => (
                 <a
@@ -106,6 +106,18 @@ export function HeroTwoColumn() {
                   {getSocialIcon(link.platform)}
                 </a>
               ))}
+              <a
+                href="https://www.credly.com/badges/ae2fa27b-dc04-4ffb-b775-63a8e9dde040/public_url"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="AWS Certified Solutions Architect – Professional"
+              >
+                <img
+                  src="/aws-certified-solutions-architect-professional.png"
+                  alt="AWS Certified Solutions Architect – Professional"
+                  className="h-12 w-12"
+                />
+              </a>
             </div>
           </div>
         </div>

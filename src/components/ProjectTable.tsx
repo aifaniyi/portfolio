@@ -56,13 +56,13 @@ export function ProjectTable({
               <td className="py-4 px-4">
                 <div className="flex items-start gap-3">
                   <img
-                    src={getProjectThumbnail(project, 100, 100)}
+                    src={getProjectThumbnail(project, 200, 200)}
                     alt={project.title}
-                    className="w-12 h-12 rounded object-cover hidden sm:block"
+                    className="w-50 h-50 rounded object-cover hidden sm:block"
                     onError={(e) => {
                       const target = e.target as HTMLImageElement;
-                      const fallback = `https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=100&h=100&fit=crop`;
-                      const placeholder = `https://placehold.co/100x100/3b82f6/ffffff?text=${encodeURIComponent(project.category.slice(0, 2))}`;
+                      const fallback = `https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=200&h=200&fit=crop`;
+                      const placeholder = `https://placehold.co/200x200/3b82f6/ffffff?text=${encodeURIComponent(project.category.slice(0, 2))}`;
 
                       if (target.src.includes('images.unsplash.com')) {
                         target.src = placeholder;
