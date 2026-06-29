@@ -97,6 +97,7 @@ export const projects: Project[] = [
       'https://resyze.aoilabs.net/cdn/10dcb518-6af7-4a0d-9752-14d2ff0f8917/d31b1ba1-de3e-4f98-820d-085e6e70724d',
       'https://resyze.aoilabs.net/cdn/10dcb518-6af7-4a0d-9752-14d2ff0f8917/f7e610d7-4c3f-4338-a1c3-36415fdabf90',
       'https://resyze.aoilabs.net/cdn/10dcb518-6af7-4a0d-9752-14d2ff0f8917/7c90031a-e4dc-4d94-beca-32d09c022e7c',
+      'https://resyze.aoilabs.net/cdn/10dcb518-6af7-4a0d-9752-14d2ff0f8917/2510c8a9-d0fb-4aaf-bbd0-f7b8c79f8cbf',
     ],
     thumbnail:
       'https://resyze.aoilabs.net/cdn/10dcb518-6af7-4a0d-9752-14d2ff0f8917/f7e610d7-4c3f-4338-a1c3-36415fdabf90?w=100&h=100',
